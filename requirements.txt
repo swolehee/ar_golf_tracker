@@ -1,0 +1,35 @@
+# Core dependencies
+python-dateutil>=2.8.2
+
+# Encryption
+cryptography>=41.0.0  # AES-256 encryption for data at rest
+
+# Computer Vision / ML
+ultralytics>=8.0.0  # YOLOv8/v11 for club recognition
+opencv-python>=4.8.0  # Camera feed processing
+numpy>=1.24.0  # Array operations
+
+# Database
+psycopg2-binary>=2.9.9  # PostgreSQL adapter
+
+# API
+fastapi>=0.104.0  # REST API framework
+uvicorn>=0.24.0  # ASGI server
+pydantic>=2.5.0  # Data validation
+pydantic[email]>=2.5.0  # Email validation
+python-jose[cryptography]>=3.3.0  # JWT tokens
+passlib[bcrypt]>=1.7.4  # Password hashing
+python-multipart>=0.0.6  # Form data parsing
+
+# Testing
+pytest>=7.4.0
+pytest-cov>=4.1.0
+hypothesis>=6.92.0  # Property-based testing
+
+# Code quality
+black>=23.0.0
+flake8>=6.0.0
+mypy>=1.5.0
+
+# Development
+ipython>=8.12.0
