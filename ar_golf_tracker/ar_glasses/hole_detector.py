@@ -49,7 +49,7 @@ class HoleDetector:
         with db_connection.cursor() as cursor:
             # Use the database function to find current hole
             cursor.execute("""
-                SELECT find_current_hole(%s, %s, %s, %s)
+                SELECT find_current_hole(%s::uuid, %s, %s, %s::integer)
             """, (
                 self.current_course_id,
                 current_position.latitude,

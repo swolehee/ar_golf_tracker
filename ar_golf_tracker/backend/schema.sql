@@ -148,26 +148,31 @@ BEGIN
 END;
 $$ LANGUAGE plpgsql;
 
+DROP TRIGGER IF EXISTS update_users_updated_at ON users;
 CREATE TRIGGER update_users_updated_at
     BEFORE UPDATE ON users
     FOR EACH ROW
     EXECUTE FUNCTION update_updated_at_column();
 
+DROP TRIGGER IF EXISTS update_courses_updated_at ON courses;
 CREATE TRIGGER update_courses_updated_at
     BEFORE UPDATE ON courses
     FOR EACH ROW
     EXECUTE FUNCTION update_updated_at_column();
 
+DROP TRIGGER IF EXISTS update_holes_updated_at ON holes;
 CREATE TRIGGER update_holes_updated_at
     BEFORE UPDATE ON holes
     FOR EACH ROW
     EXECUTE FUNCTION update_updated_at_column();
 
+DROP TRIGGER IF EXISTS update_user_rounds_updated_at ON user_rounds;
 CREATE TRIGGER update_user_rounds_updated_at
     BEFORE UPDATE ON user_rounds
     FOR EACH ROW
     EXECUTE FUNCTION update_updated_at_column();
 
+DROP TRIGGER IF EXISTS update_user_shots_updated_at ON user_shots;
 CREATE TRIGGER update_user_shots_updated_at
     BEFORE UPDATE ON user_shots
     FOR EACH ROW

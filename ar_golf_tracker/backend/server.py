@@ -5,7 +5,7 @@ This script starts the FastAPI server with optional TLS 1.3 encryption.
 
 import uvicorn
 import logging
-from .config import APIConfig
+from ar_golf_tracker.backend.config import APIConfig
 
 
 logging.basicConfig(
